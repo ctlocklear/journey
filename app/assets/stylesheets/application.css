@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+#map-canvas{
+	height: 500px;
+	border: 10px solid white;
+}
+
+body{
+	padding-top: 60px;
+	background-color: #F3FFFF;
+}

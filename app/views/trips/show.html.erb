@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<article id="trips_show" data-address="<%=@trip.destination%>">
+
+<div id="map-canvas"></div>
+
 <p>
   <strong>Trip name:</strong>
   <%= @trip.trip_name %>
@@ -14,6 +18,8 @@
   <strong>User:</strong>
   <%= @trip.user_id %>
 </p>
+
+</article>
 
 <%= link_to 'Edit', edit_trip_path(@trip) %> |
 <%= link_to 'Back', trips_path %>

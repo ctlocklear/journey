@@ -21,14 +21,14 @@ ActiveRecord::Schema.define(version: 20150326213356) do
     t.string   "location"
     t.string   "time_of_event"
     t.string   "foursqaure_id"
-    t.string   "trip_id"
+    t.integer  "trip_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
 
   create_table "notes", force: :cascade do |t|
-    t.string   "content"
-    t.string   "trip_id"
+    t.text     "content"
+    t.integer  "trip_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20150326213356) do
   create_table "trips", force: :cascade do |t|
     t.string   "trip_name"
     t.string   "destination"
-    t.string   "user_id"
+    t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

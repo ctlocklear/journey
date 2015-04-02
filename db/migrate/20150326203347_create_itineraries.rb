@@ -5,7 +5,7 @@ class CreateItineraries < ActiveRecord::Migration
       t.string :location
       t.string :time_of_event
       t.string :foursqaure_id
-      t.string :trip_id
+      t.references :trip
 
       t.timestamps null: false
     end

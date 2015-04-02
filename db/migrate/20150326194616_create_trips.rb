@@ -3,7 +3,7 @@ class CreateTrips < ActiveRecord::Migration
     create_table :trips do |t|
       t.string :trip_name
       t.string :destination
-      t.string :user_id
+      t.references :user
 
       t.timestamps null: false
     end
