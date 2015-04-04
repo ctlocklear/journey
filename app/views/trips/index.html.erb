@@ -10,15 +10,19 @@
 </button>
 
 <% @trips.each do |trip| %>
-<div class = "trip"
-  <strong><%=trip.trip_name %></strong>
-  <p><%=trip.destination %></p>
+<div class = "trip">
+  Trip Name: <strong><%=trip.trip_name %></strong>
+   <p>Destination: <%=trip.destination %></p>
+
   <div class = "meta">
     <button type="button" class="btn btn-success">
     <%= link_to "Trip Itinerary", new_itinerary_path %>
-  </button> <button type="button" class="btn btn-default">
+  </button> 
+
+  <button type="button" class="btn btn-default">
     <%= link_to "Trip Notes", new_note_path %>
   </button>
+
   <span class="admin">
     <button type="button" class="btn btn-warning">
     <%= link_to "Edit", edit_trip_path(trip) %>
@@ -26,6 +30,7 @@
    <button type="button" class="btn btn-danger">
     <%= link_to "Delete", trip, method: :delete, data: { confirm: "Woah! Are you sure you want to delete this trip?"} %>
   </button>
+
   </span><br>
   <%= link_to "Trip created " + time_ago_in_words(trip.created_at) + " ago", trip %>
   </div>
