@@ -4,7 +4,7 @@
 	<title>JourneyEverywhere</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script type="text/javascript"
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXVGDWUAxkls1W_9vDRyTkuy9AM9K6XEM&libraries=places"></script>
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXVGDWUAxkls1W_9vDRyTkuy9AM9K6XEM&libraries=places&sensor=false"></script>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
@@ -13,28 +13,52 @@
 </head>
 <body>
 	<!-- <h1>Journey Everywhere</h1> -->
-		
-		<div class="navbar navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class ="container">
-					<a href="#" class="brand"> Journey Everywhere</a>
-					<ul class="nav">
-						<li> <%= link_to "My Trips", trips_path %> </li>
-						<li> <%= link_to "My Itineraries", itineraries_path %> </li>
-						<li> <%= link_to "My Notes", notes_path %> </li>
-				</div>
+
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class ="container">
+				<a href="#" class="brand"> Journey Everywhere</a>
+				<ul class="nav">
+					<li> <%= link_to "My Trips", trips_path %> </li>
+					<li> <%= link_to "My Itineraries", itineraries_path %> </li>
+					<li> <%= link_to "My Notes", notes_path %> </li>
+				</ul>
+				<ul class="nav pull-right">
+					<% if user_signed_in? %>
+					<li> <%= link_to current_user.email, edit_user_registration_path %></li>
+					<li> <%= link_to "Log Out", logout_path %></li>
+					<% else %>
+					<li> <%= link_to "Register", register_path%>  </li>
+					<li> <%= link_to "Log In", login_path%>  </li>
+					<% end %>
+				</ul>
 			</div>
 		</div>
+	</div>
 
 
-<div class="container">
+	
+		<div class="container">
+	 <% if flash[:notice] %>
+	<div class="alert alert-success">
+		<button class = "close" data-dismiss="alert">x</button>
+		<%= flash[:notice] %>
+	</div>
+	<% end %> 
+
+	<div class="container">
+	 <% if flash[:alert] %>
+	<div class="alert alert-error">
+		<button class = "close" data-dismiss="alert">x</button>
+		<%= flash[:alert] %>
+	</div>
+	<% end %> 
 		<%= yield %>
 	</div>
-<div class="container">
-	<br><em>&copy; Locklear 2015</em>
-	<br><em>Stay Trippin' Friends</em>
-</div>
-<p class="notice"><%= notice %></p>
-		<p class="alert"><%= alert %></p>
+	<div class="container">
+		<br><em>&copy; Locklear 2015</em>
+		<br><em>Stay Trippin' Friends</em>
+	</div>
+	 
 </body>
 </html>

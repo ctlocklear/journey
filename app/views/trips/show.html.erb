@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <article id="trips_show" data-address="<%=@trip.destination%>">
-
+<input id="pac-input" class="controls" type="text" placeholder="Hotels, Food, Attractions, etc.">
 <div id="map-canvas"></div>
 
 <p>
@@ -16,10 +16,12 @@
 
 <p>
   <strong>User:</strong>
-  <%= @trip.user_id %>
+  <%= @trip.user.email %>
 </p>
 
 </article>
 
+<%= link_to 'Add an Itinerary for this trip', new_itinerary_path %> |
+<%= link_to 'Add a note to this trip', new_note_path %> |
 <%= link_to 'Edit', edit_trip_path(@trip) %> |
 <%= link_to 'Back', trips_path %>
