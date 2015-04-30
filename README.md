@@ -2,6 +2,8 @@
 
 Journey Everywhere is an app that allows uders to plan trips, itineraries, and add notes.
 
+Eventually the app will have markers that suggest hotels, restaurants, monuments, museums, etc. 
+
 
 <h1>Languages, APIs, and Frameworks</h1>
 <ul>
@@ -12,5 +14,4 @@ Journey Everywhere is an app that allows uders to plan trips, itineraries, and a
 <li>Bootstrap</li>
 <li>Coffeescript</li>
 <li>Google Maps API</li>
-<li>Foursqaure API</li>
 </ul>
