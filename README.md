@@ -1,5 +1,8 @@
 # Journey Everywhere
 
+This is part of my final piece for General Assembly's WDI program.
+
+
 Journey Everywhere is an app that allows uders to plan trips, itineraries, and add notes.
 
 Eventually the app will have markers that suggest hotels, restaurants, monuments, museums, etc. 
@@ -15,3 +18,4 @@ Eventually the app will have markers that suggest hotels, restaurants, monuments
 <li>Coffeescript</li>
 <li>Google Maps API</li>
 </ul>
+
