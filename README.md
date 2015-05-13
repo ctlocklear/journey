@@ -11,7 +11,7 @@ Eventually the app will have markers that suggest hotels, restaurants, monuments
 <h1>Languages, APIs, and Frameworks</h1>
 <ul>
 <li>Ruby on Rails</li>
-<li>Javascript</li>
+<li>Javascript/JQUERY</li>
 <li>HTML</li>
 <li>CSS</li>
 <li>Bootstrap</li>
