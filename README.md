@@ -17,5 +17,7 @@ Eventually the app will have markers that suggest hotels, restaurants, monuments
 <li>Bootstrap</li>
 <li>Coffeescript</li>
 <li>Google Maps API</li>
+<li>Devise Gem</li>
 </ul>
+
 
